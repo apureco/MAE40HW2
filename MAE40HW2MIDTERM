@@ -1,0 +1,39 @@
+%%HOMEWORK2%%
+%Question 2D
+clc;
+clear all;
+close all;
+%Function
+%G1(s)=(((s)^(2))((R)^(2))((C)^(2))+(3*s*R*C)+1)/(((s)^(2))((R)^(2))((C)^(2))-(s*R*C)-1)
+%Numerator
+num=[1 3];
+%Denominator
+den=[1 -1];
+%Transfer Function
+G= tf(num, den)
+%Plot
+bode ( G ),grid 
+s=0;
+bode=(((s)^(2))((R)^(2))((C)^(2))+(3*s*R*C)+1)/(((s)^(2))((R)^(2))((C)^(2))-(s*R*C)-1)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%Question 1D
+clc;
+clear all;
+close all;
+%Function
+%G1(s)=(2+5s*C*R)/(4*(s)^(2)*(R)^(2)*(C)^(2)+s*C*R+2)
+%Numerator
+num=[5];
+%Denominator
+den=[4 1];
+%Transfer Function
+G= tf(num, den)
+%Plot
+bode ( G ),grid 
+s=0;
+bode=((2+5s*C*R)/(4*(s)^(2)*(R)^(2)*(C)^(2)+s*C*R+2))
